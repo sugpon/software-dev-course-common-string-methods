@@ -66,26 +66,27 @@ Complete the following tasks and assign the results to the specified variables. 
 */
 
 //Starter Code
+// Starter Code
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = inputString.includes("JavaScript");
+let codingPosition = inputString.indexOf("Coding");
+let startsWithWelcome = inputString.trim().startsWith("Welcome");
+let endsWithToday = inputString.trim().endsWith("today.");
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = inputString.toLowerCase();
+let uppercaseString = inputString.toUpperCase();
+let trimmedString = inputString.trim();
+let replacedString = inputString.replace("JavaScript", "coding");
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = trimmedString.split(" ");
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString.charAt(0);
+let extractedBootcamp = trimmedString.slice(17, 25); // "Bootcamp" starts at index 17
 
 // Log all results
 console.log({
@@ -101,3 +102,35 @@ console.log({
   firstCharacter,
   extractedBootcamp,
 });
+
+
+
+// Practice Problem #1
+
+// Activity 1: Searching Strings
+let text1 = "Learning JavaScript is fun!";
+let hasJavaScript1 = text1.includes("JavaScript");
+let positionOfFun = text1.indexOf("fun");
+
+// Activity 2: Transforming Strings
+let org1 = "  CODE BOOTCAMP  ";
+let trimmedOrg = org1.trim().toLowerCase();
+let replacedBootcamp = trimmedOrg.replace("bootcamp", "JavaScript");
+
+// Activity 3: Breaking Apart a Sentence
+let sentence1 = "Coding is fun and educational";
+let wordsArray1 = sentence1.split(" ");
+
+// Activity 4: Retrieving Substrings
+let bootcamp1 = "Bootcamp";
+let firstCharBootcamp = bootcamp1.charAt(0);
+let extractedCamp = bootcamp1.slice(4);
+
+// Advanced Challenge
+let customerData = `Customer: John Doe
+Order: Apple, Banana, Grape
+Total: $20.50`;
+
+let customerName1 = customerData.split("\n")[0].split(": ")[1];
+let orderItems1 = customerData.split("\n")[1].split(": ")[1].split(", ");
+let totalPrice1 = customerData.split("\n")[2].toUpperCase();
